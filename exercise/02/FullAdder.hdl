@@ -19,5 +19,5 @@ CHIP FullAdder {
     And(a=a,b=c,out=AandC);
     And(a=b,b=c,out=BandC);
     Or(a=AandB,b=AandC,out=ABorAC);
-    or(a=ABorAC,b=BandC,out=carry);
+    Or(a=ABorAC,b=BandC,out=carry);
 }

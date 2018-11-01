@@ -13,9 +13,7 @@ CHIP Xor {
     OUT out;
 
     PARTS:
-    Nand(a=b,b=b,out=ynandy);
-    Nand(a=a,b=ynandy,out=xnandyy);
-    Nand(a=a,b=a,out=xnandx);
-    Nand(a=xnandx,b=b,out=xxnandy);
-    Nand(a=xnandyy,b=xxnandy,out=out);
+    Or(a=a, b=b, out=aorb);
+	Nand(a=a, b=b, out=anandb);
+	And(a=aorb, b=anandb, out=out);
 }
